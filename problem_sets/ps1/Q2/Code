@@ -45,7 +45,7 @@ def ndiff(fun, x, full = False):
         
         return 'The derivative is {}'.format(d)
 
-    
+#Example to demonstrate that it works    
 fun = np.exp    
 x = np.linspace(1,5,5)
 ans = ndiff(fun, x, full=True)
