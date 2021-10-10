@@ -14,7 +14,7 @@ def rk4_step(fun, x, y, h):
     k1 = h*fun(x, y)
     k2 = h*fun(x+h/2, y+k1/2)
     k3 = h*fun(x+h/2, y+k2/2)
-    k4 = h*fun(x+h/2, y+k3)
+    k4 = h*fun(x+h, y+k3)
 
     dy = (k1 + 2*k2 + 2*k3 + k4)/6
 
