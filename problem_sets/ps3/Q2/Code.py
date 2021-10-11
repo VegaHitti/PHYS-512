@@ -36,24 +36,28 @@ sol = integrate.solve_ivp(fun, [t0, t1], y0, method = "Radau", t_eval = t)
 #Part b)
 
 
-#U238 is the first species in the chain, and Pb206 is the last
+fig1 = plt.figure()
+
+#U238 is the first species, Pb206 is the last
 
 plt.plot(sol.t, sol.y[0,:], c="lightseagreen", label = "U238")
 plt.plot(sol.t, sol.y[-1,:], c="mediumslateblue", label = "Pb206")
 plt.title("Ratio of Pb206 to U328 Over Time")
 plt.legend()
 plt.show()
-plt.savefig("ratio1.png")
+fig1.savefig("ratio1.png")
 
 
-#U234 is the 4th species in the chain, and Thorium 230 is the 5th
+fig2 = plt.figure()
+
+#U234 is the 4th species, and Thorium 230 is the 5th
 
 plt.plot(sol.t, sol.y[3,:], c = "lightseagreen", label = "U234")
 plt.plot(sol.t, sol.y[4,:], c = "mediumslateblue", label = "Thorium 230")
 plt.title("Ratio of Thorium 230 to U234 Over Time")
 plt.legend()
 plt.show()
-plt.savefig("ratio2.png")
+fig2.savefig("ratio2.png")
 
 
 
