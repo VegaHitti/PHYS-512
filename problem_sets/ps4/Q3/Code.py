@@ -87,7 +87,7 @@ def prior_pdf(pars, fit_pars = fit_pars, fit_errs = par_errs):
 
 def next(pars, y, y_errs):
 
-    prior = prior_pdf(pars,  )
+    prior = prior_pdf(pars)
 
     if prior == 0:
 
